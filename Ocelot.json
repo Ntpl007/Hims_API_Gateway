@@ -1,0 +1,55 @@
+{
+  "ReRoutes": [
+
+    {
+      "DownstreamPathTemplate": "/CreateOP/{everything}",
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.10.20.25/",
+          "Port": 88
+          //  "Port": 44336
+        }
+      ],
+      "UpstreamPathTemplate": "/CreateOP/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    },
+
+  
+    {
+      "DownstreamPathTemplate": "/Payments/{everything}",
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          //  "Host": "localhost", // "10.10.20.25/",
+          "Host": "10.10.20.25/",
+          //"Port": 44311 // 90
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/Payments/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/FetchMasterData/{everything}",
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          //  "Host": "localhost", // "10.10.20.25/",
+          "Host": "10.10.20.25/",
+          //"Port": 44311 // 90
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/FetchMasterData/{everything}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST" ]
+    }
+
+
+  ]
+ 
+
+}
